@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 var timeSlots = ['9am', "10am", "11am", "12pm","1pm","2pm","3pm", "4pm", "5pm"];
+
   for(var i = 0; i < timeSlots.length; i++){
     var newDiv =$("<div>");
     var timeDiv = $("<div>");
@@ -29,6 +30,12 @@ var timeSlots = ['9am', "10am", "11am", "12pm","1pm","2pm","3pm", "4pm", "5pm"];
   }
 });
 
-
+var dateTime = new Date();  
+var currentDateDiv =$("<p>");
+currentDateDiv.attr(dateTime.toDateString() + dateTime.getHours() + ":" + dateTime.getMinutes());
+$(".lead").append(currentDateDiv);
+console.log(dateTime.toDateString());
+console.log(dateTime.getHours() + ":" + dateTime.getMinutes()) ;
 
 ////date and time displaye on jumbtron moment()
+//save to local storage setlocalStorage getLocalStorage 
